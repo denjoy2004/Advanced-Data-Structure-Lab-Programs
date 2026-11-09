@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int getindex( int element, int n,int value){
+	for(int i=0;i<n;i++){
+		if(element[i]==value){
+			return i;
+		}
+	}
+	return -1;
+}
+void find(int parent[],int i){
+	if(parent[i]=i){
+		parent[i]=find(parent,parent[i]);
+		
+	}
+	return parnt[i];
+	
+}
+void unionset(int element[],int parent[],int n, int a, int b){
+	int i=getindex(element,n,a);
+	int j=getindex(element,n,b);
+	if(i==-1||j==-1){
+		printf("Elementf not found\n");
+		return;
+	}
+	int ri=find(parent,i);\
+	int rj=find(parent,j<0;
+	if(ri==rj){
+		printf("%id and %d are already in the same set\n"a,b,);
+		
+	}
+}
+void main(){
+	int n,choice,a,b,f;
+	printf("Enter number of elements : ");
+	scanf(""%d",&n);
+	int element[n], parent[n];
+	printf("Enter elements : ");
+	for(int i=0;i<n;i++){
+		scanf("%d",&element[i]);
+		parent[i]=i;
+	}
+	do{
+		printf("\nEnter choice\n1.Find\n2.Union\n3.Display\n");
+		scanf(""%d",&choice);
+		switch (choice){
+			case 1:
+				
+				printf("Enter a element :")
+				scanf("%d",&f);
+				findet(f,n,element);
+				break;
+			case 2 :
+				printf("Enter 2 elements :")
+				scanf("%d%d",&a,&b);
+				unionset(a,b);
+				break;
+			case 3:
+				display();
+				break;
+			case 4:
+				printf("Exiting");
+				break;
+			default:
+				printf("Invalid Choice");
+				
+		}while(choice!=4)'
+		
+	}
+	
+}
